@@ -16,13 +16,13 @@
 
 
     <script>
-      const apiUrl = 'https://opendata.cwa.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWB-FE4AD205-4642-40AD-B7FD-336A53D1ED2A';
+      const apiUrl = 'hhttps://opendata.cwa.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWA-88282DC7-CC14-45D6-B786-D68B1C81F577&limit=10&format=JSON&locationName=&elementName=';
       const weatherList = document.getElementById('weatherList');
 
 
       async function loadWeather() {
         try {
-          const resp = await fetch(apiUrl);
+          const resp = await fetch(apiUrl); //這邊就是get
           if (!resp.ok) throw new Error(`HTTP 錯誤：${resp.status}`);
           const data = await resp.json();
           const locations = data.records.location;
