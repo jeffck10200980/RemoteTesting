@@ -56,13 +56,13 @@
             p.textContent = `天氣：${desc}`;
             item.appendChild(p);
 
-            // 取第一個 time 節點的
+            // 取第一個 time 節點的最高溫
             const t2 = loc.weatherElement.find(e => e.elementName === 'MaxT');
             const desc2 = t2 && t2.time && t2.time[0] ? t2.time[0].parameter.parameterName : '—';
 
 
             const p2 = document.createElement('p2');
-            p2.textContent = `最高溫：${desc}`;
+            p2.textContent = `最高溫：${desc2}`;
             item.appendChild(p2);
 
 
